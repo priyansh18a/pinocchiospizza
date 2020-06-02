@@ -1,0 +1,37 @@
+{% extends "orders/base.html" %}
+
+
+{% block body %}
+<section class="hero is-primary is-bold is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+{% if message %}
+<div class="context-message">
+  {{ message }}
+</div>
+{% endif %}
+
+<table class="text-center">
+  <tr class="topspace">
+    <th><h1>Thanks for your order.</h1></th>
+  </tr>
+  <tr>
+    <td>
+      <h3>Order #{{ order.id }}</h3>
+    </td>
+  </tr>
+  <tr>
+     <td>
+       <h4><em>We're on it!</em></h4>
+    </td>
+  </tr>
+  <tr><td>
+    <nav class="nav flex-column">
+      <a class="nav-link" href="{% url 'menu' %}" style="color:white">Back to menu</a>
+    </nav>
+  </td></tr>
+</table>
+</div>
+</div>
+</section>
+{% endblock %}
